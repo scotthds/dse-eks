@@ -43,7 +43,7 @@ $ kubectl apply -f common/secrets/opsc-secrets.yaml
 $ kubectl apply -f eks/dse-suite.yaml
 ```
 
-#### 4. Access the DataStax Enterprise OpsCenter managing the newly created DSE cluster**
+#### 4. Access the DataStax Enterprise OpsCenter managing the newly created DSE cluster
 
 You can run the following command to monitor the status of your deployment.
 ```
