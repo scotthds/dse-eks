@@ -6,7 +6,7 @@ It uses "default" namespace in Kubernetes and the EKS storage class definition.
 You should modify the yamls according to your own deployment requirements
 
 #### Prerequisites:
-* Tools including wget, kubectl have already been installed on your machine to execute our yamls.
+* Tools including eksctl and kubectl should already be installed on your machine.
 * Kubernetes server's version is 1.8.x or higher. 
 
 #### 1. Create required configmaps for DataStax Enterprise Statefulset and DataStax Enterprise OpsCenter Statefulset
