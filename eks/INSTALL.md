@@ -1,18 +1,18 @@
 # Creating an EKS cluster
 
-Please read the EKS getting started guide before creating the EKS cluster and deploying DSE in the steps below. https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html
+Please read the EKS getting started guide before creating the EKS cluster and deploying DSE in the steps [here](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html)
 
 Amazon EKS is available in the following Regions at this time:
 US West (Oregon) (us-west-2)
 US East (N. Virginia) (us-east-1)
 
-It is assumed that you have the latest version of the AWS CLI installed. If not, follow the instructions here. https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-bundle.html
+It is assumed that you have the latest version of the AWS CLI installed. If not, follow the instructions [here]( https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-bundle.html)
 
 Running kubectl version --short --client should show a 1.10 or higher version
 Client Version: v1.10.3
 
 ## EKSCTL
-eksctl is a simple CLI tool for creating clusters on EKS - Amazon's new managed Kubernetes service for EC2. https://github.com/weaveworks/eksctl
+eksctl is a simple CLI tool for creating clusters on EKS - Amazon's new managed Kubernetes service for EC2. check out the project [here](https://github.com/weaveworks/eksctl)
 
 *** The instructions below are for a basic 5 node kubernetes cluster where a new VPC is created for the cluster ***
 
@@ -92,7 +92,7 @@ At this point you should be able see cluster information in the AWS console at h
 
 
 ### Configure Kubernetes for Amazon EKS
-Please read about configuring kubectl before executing the following steps. https://docs.aws.amazon.com/eks/latest/userguide/configure-kubectl.html
+Please read about configuring kubectl before executing the following steps [here](https://docs.aws.amazon.com/eks/latest/userguide/configure-kubectl.html)
 
 ### Install kubectl locally
 curl -o kubectl https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-07-26/bin/darwin/amd64/kubectl (this example is for macOS clients)
@@ -143,7 +143,7 @@ ip-192-168-76-62.us-west-2.compute.internal     Ready     <none>    10m       v1
 
 ## Deploy DSE on EKS
 
-Follow the steps at https://github.com/scotthds/dse-eks/blob/master/README.md to deploy DSE on your EKS cluster
+Follow the steps [here](https://github.com/scotthds/dse-eks/blob/master/README.md) to deploy DSE on your EKS cluster
 
 
 ### Delete EKS cluster
