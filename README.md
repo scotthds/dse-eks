@@ -63,3 +63,15 @@ $ kubectl delete pvc -l app=dse (to remove the dynamically provisioned persisten
 $ kubectl delete pvc -l app=opscenter (to remove the dynamically provisioned persistent volumes for OpsCenter)
 ```
 
+
+## Scaling
+
+## Backup and Restore
+
+## Update Cluster Nodes
+
+## Applying Configuration Changes
+
+## Security
+
+## OpsCenter
