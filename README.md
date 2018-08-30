@@ -74,6 +74,12 @@ $ kubectl delete pvc -l app=opscenter (to remove the dynamically provisioned per
 
 ## Security
 
+## Performance
+
+## Observability
+
+## Alerting
+
 ## OpsCenter
 
 ## Client Application Testing
