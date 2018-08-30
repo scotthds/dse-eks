@@ -1,7 +1,12 @@
-# kubernetes-dse
-Deploy DataStax Enterprise (DSE) cluster on an EKS Kubernetes cluster
+# Overview
 
-This project provides a set of sample Kubernetes yamls to provision DataStax Enterprise in an EKS Kubernetes cluster.
+Datastax Enteprise (DSE) is thhe Always-On, Distributed Cloud Database, Designed for Hybrid Cloud
+
+It has all the advantages of Apache Cassandra™ plus twice the performance, self-driving simplicity, analytics, search, graph, and advanced security.
+
+This project will guide you though a deployment of DSE cluster on an EKS Kubernetes cluster and suggest some ways to deal with Day 2 operations
+
+The project provides a set of sample Kubernetes yamls to provision DataStax Enterprise in an EKS Kubernetes cluster.
 It uses "default" namespace in Kubernetes and the EKS storage class definition. 
 You should modify the yamls according to your own deployment requirements
 
