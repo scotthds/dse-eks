@@ -154,7 +154,7 @@ Delete any cloud formation stacks remaining that are associated with this cluste
 
 
 ## Managing Users or IAM Roles for your Cluster
-In order to add more users to the cluster follow the steps below. Please read https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html first.
+In order to add more users to the cluster follow the steps below. Please read [this](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html) first.
 
 
 ### Edit aws-auth ConfigMap for your cluster
