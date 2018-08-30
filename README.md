@@ -14,7 +14,7 @@ You should modify the yamls according to your own deployment requirements.
 - Tools including eksctl and kubectl should already be installed on your machine.
 - Kubernetes server's version is 1.8.x or higher. 
 - an EKS cluster with 5 nodes and appropriate instances types
-  - To create an EKS cluster see the instructions at https://github.com/scotthds/dse-eks/blob/master/eks/INSTALL.md
+  - To create an EKS cluster see the instructions [here] (https://github.com/scotthds/dse-eks/blob/master/eks/INSTALL.md)
 
 ## Deploy DSE into EKS cluster
 
@@ -33,7 +33,7 @@ $ kubectl create configmap opsc-ssl-config --from-file=common/opscenter/conf-dir
 ```
 
 #### 2. Create your own OpsCenter admin's password using K8 secret
-You can update the [opsc-secrets.yaml file's admin_password's value](https://github.com/DSPN/kubernetes-dse/blob/dev-201808/common/secrets/opsc-secrets.yaml#L7) with your own base64 encoded password. Use this command **$ echo -n '\<your own password\>' | base64** to generate your base64 encoded password.
+You can update the [opsc-secrets.yaml file's admin_password's value](https://github.com/scotthds/dse-eks.git/blob/common/secrets/opsc-secrets.yaml#L7) with your own base64 encoded password. Use this command **$ echo -n '\<your own password\>' | base64** to generate your base64 encoded password.
 ```
 $ kubectl apply -f common/secrets/opsc-secrets.yaml 
 ```
