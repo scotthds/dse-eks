@@ -13,8 +13,9 @@ You should modify the yamls according to your own deployment requirements.
 #### Prerequisites:
 * Tools including eksctl and kubectl should already be installed on your machine.
 * Kubernetes server's version is 1.8.x or higher. 
-* to create an EKS cluster see the instructions at https://github.com/scotthds/dse-eks/blob/master/eks/INSTALL.md
+* To create an EKS cluster see the instructions at https://github.com/scotthds/dse-eks/blob/master/eks/INSTALL.md
 
+## Deploy DSE into EKS cluster
 
 #### 1. Create required configmaps for DataStax Enterprise Statefulset and DataStax Enterprise OpsCenter Statefulset
 ```
@@ -37,7 +38,7 @@ $ kubectl apply -f common/secrets/opsc-secrets.yaml
 ```
 
 
-##### 3 Running DSE + OpsCenter on EKS
+#### 3. Deploy DSE + OpsCenter on EKS
 ```
 $ kubectl apply -f eks/dse-suite.yaml
 ```
@@ -48,13 +49,13 @@ You can run the following command to monitor the status of your deployment.
 ```
 $ kubectl get all
 ```
-Then run the following command to view if the status of **dse-cluster-init-job** has successfully completed.  It generally takes about 10 minutes to spin up a 3-node DSE cluster.
+You can also run the following command to view if the status of **dse-cluster-init-job** has successfully completed.  It generally takes about 10 minutes to spin up a 3-node DSE cluster.
 ```
 $ kubectl get job dse-cluster-init-job
 ```
 Once complete, you can access the DataStax Enterprise OpsCenter web console to view the newly created DSE cluster by pointing your browser at https://<svc/opscenter-ext-lb's EXTERNAL-IP>:8443 with Username: admin and Password: **datastax1!** (if you use the default OpsCenter admin's password K8 secret)
 
-#### 5. Tear down the DSE deployment**
+#### 5. Tear down the DSE deployment
 ```
 $ kubectl delete -f eks/dse-auite.yaml
 $ kubectl delete pvc -l app=dse (to remove the dynamically provisioned persistent volumes for DSE)
