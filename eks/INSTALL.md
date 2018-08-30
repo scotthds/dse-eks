@@ -1,4 +1,4 @@
-# Deploying DSE on AWS EKS
+# Creating an EKS cluster
 
 Please read the EKS getting started guide before creating the EKS cluster and deploying DSE in the steps below. https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html
 
