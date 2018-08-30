@@ -11,10 +11,10 @@ It uses the "default" namespace in Kubernetes aa well as a sample EKS storage cl
 You should modify the yamls according to your own deployment requirements.
 
 #### Prerequisites:
-..* Tools including eksctl and kubectl should already be installed on your machine.
-..* Kubernetes server's version is 1.8.x or higher. 
-..* an EKS cluster with 5 nodes and appropriate instances types
-....* To create an EKS cluster see the instructions at https://github.com/scotthds/dse-eks/blob/master/eks/INSTALL.md
+- Tools including eksctl and kubectl should already be installed on your machine.
+- Kubernetes server's version is 1.8.x or higher. 
+- an EKS cluster with 5 nodes and appropriate instances types
+  - To create an EKS cluster see the instructions at https://github.com/scotthds/dse-eks/blob/master/eks/INSTALL.md
 
 ## Deploy DSE into EKS cluster
 
