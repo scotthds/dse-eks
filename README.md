@@ -58,7 +58,7 @@ Once complete, you can access the DataStax Enterprise OpsCenter web console to v
 
 #### 5. Tear down the DSE deployment
 ```
-$ kubectl delete -f eks/dse-auite.yaml
+$ kubectl delete -f eks/dse-suite.yaml
 $ kubectl delete pvc -l app=dse (to remove the dynamically provisioned persistent volumes for DSE)
 $ kubectl delete pvc -l app=opscenter (to remove the dynamically provisioned persistent volumes for OpsCenter)
 ```
