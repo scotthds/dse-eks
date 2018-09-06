@@ -65,6 +65,8 @@ $ kubectl delete pvc -l app=opscenter (to remove the dynamically provisioned per
 
 
 ## Scaling
+
+### Scale Up
 By default, the DSE is deployed using 3 replicas. To change the number of replicas, use the following command:
 
 ```
@@ -72,6 +74,40 @@ kubectl scale statefulsets dse \
   --namespace "$NAMESPACE" --replicas=[NEW_REPLICAS]
 ```
 where [NEW_REPLICAS] is the new number.
+
+### Scale Down
+To manually remove DSE nodes from the cluster and then remove pods from Kubernetes, start from the highest-numbered pod. For each node, do following:
+
+*** replicas should never be less than 3 ***
+
+On the Cassandra container, Run nodetool decommission.
+```
+kubectl exec dse-3 --namespace default -- nodetool decommission
+```
+Scale down the StatefulSet by one, using the kubectl scale command.
+```
+kubectl scale statefulsets dse --namespace default --replicas=3
+```
+Wait until the pod is removed from the cluster.
+### check highest-numbered pod is down
+```
+ kubectl get pods
+ ```
+ 
+Remove any persistent volumes and persistent volume claims that belong to that replica.
+### get all PVCs
+```
+kubectl get pvc
+```
+### remove persistent volume claim
+```
+kubectl delete pvc/dse-data-dse-3 --namespace default
+```
+Deleting the claim will also delete the volume
+
+Repeat this procedure until the DSE cluster has the number of pods you want.
+
+
 
 ## Backup and Restore
 
