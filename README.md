@@ -65,6 +65,13 @@ $ kubectl delete pvc -l app=opscenter (to remove the dynamically provisioned per
 
 
 ## Scaling
+By default, the DSE is deployed using 3 replicas. To change the number of replicas, use the following command:
+
+```
+kubectl scale statefulsets dse \
+  --namespace "$NAMESPACE" --replicas=[NEW_REPLICAS]
+```
+where [NEW_REPLICAS] is the new number.
 
 ## Backup and Restore
 
