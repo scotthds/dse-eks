@@ -71,7 +71,7 @@ By default, the DSE is deployed using 3 replicas. To change the number of replic
 
 ```
 kubectl scale statefulsets dse \
-  --namespace "$NAMESPACE" --replicas=[NEW_REPLICAS]
+  --namespace default --replicas=[NEW_REPLICAS]
 ```
 where [NEW_REPLICAS] is the new number.
 
