@@ -125,6 +125,9 @@ Repeat this procedure until the DSE cluster has the number of pods you want.
 
 ## OpsCenter
 
+### Scaling Issues
+Scaling up and down may not always be reflected properly in OpsCenter. 
+
 ## Client Application Testing
 
 ## Other Issues
