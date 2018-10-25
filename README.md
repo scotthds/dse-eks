@@ -113,6 +113,13 @@ Repeat this procedure until the DSE cluster has the number of pods you want.
 
 ## Update Cluster Nodes
 
+```
+Update the config map:
+kubectl create configmap dse-config \
+  --from-file=./confidir  \
+  -o yaml --dry-run | kubectl replace -f -
+```
+
 ## Applying Configuration Changes
 
 ## Security
